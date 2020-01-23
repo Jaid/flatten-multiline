@@ -8,6 +8,6 @@ const indexModule = (process.env.MAIN ? path.resolve(process.env.MAIN) : path.jo
 const {default: flattenMultiline} = indexModule
 
 it("should run", () => {
-  const result = flattenMultiline()
-  expect(result).toBeGreaterThan(1549410770)
+  expect(flattenMultiline("a")).toBe("a")
+  expect(flattenMultiline("\na.\r\nb\n\n\n")).toBe("a. b")
 })

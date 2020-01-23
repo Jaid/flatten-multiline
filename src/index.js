@@ -1,23 +1,19 @@
 /** @module flatten-multiline */
 
+import splitLines from "split-lines"
+
 /**
- * @function
- * @param {number} [compareValue]
- * @returns {number} Seconds passed since Unix epoch (01 January 1970)
- * @example
- * import flattenMultiline from "flatten-multiline"
- * const result = flattenMultiline()
- * result === 1549410770
- * setTimeout(() => {
- *   const result2 = flattenMultiline(result)
- *   result2 === 3
- * }, 3000)
+ * @param {string} [input]
+ * @param {string} [separator = " "]
+ * @returns {string}
  */
-export default compareValue => {
-  const seconds = Math.floor(Date.now() / 1000)
-  if (compareValue === undefined) {
-    return seconds
-  } else {
-    return seconds - compareValue
+export default (input, separator = " ") => {
+  const string = String(input)
+  if (!string.length) {
+    return ""
   }
+  const lines = splitLines(string)
+    .map(line => line.trim())
+    .filter(line => line.length)
+  return lines.join(separator)
 }
