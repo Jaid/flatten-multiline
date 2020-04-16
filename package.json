@@ -36,5 +36,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jaid/flatten-multiline"
-  }
+  },
+  "homepage": "https://github.com/Jaid/flatten-multiline",
+  "keywords": []
 }
