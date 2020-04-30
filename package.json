@@ -37,5 +37,16 @@
     "url": "https://github.com/jaid/flatten-multiline"
   },
   "homepage": "https://github.com/Jaid/flatten-multiline",
-  "keywords": []
+  "keywords": [
+    "convert",
+    "flatten",
+    "lib",
+    "library",
+    "multiline",
+    "multiline-string",
+    "string",
+    "text",
+    "util",
+    "utility"
+  ]
 }
